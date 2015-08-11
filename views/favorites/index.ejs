@@ -1,0 +1,19 @@
+<h1> FAVORITES PAGE </h1>
+
+<ul>
+  <% myFavorites.forEach(function(fave){ %>
+  <div class="well">
+  <li><a href="/movies/show/<%= fave.imdbid %>">Title: <%= fave.title%></a><br>
+  Year: <%= fave.year %><br>
+  imdb Id: <%= fave.imdbid %><br>
+  Poster: <%= fave.poster %><br><br>
+  <a href="/favorites/comment/<%= fave.id %>">
+   <button type="submit" class="btn btn-success">Add a comment!</button>
+   </a>
+  </li>
+     </div>
+  <% }); %>
+</ul>
+
+
+

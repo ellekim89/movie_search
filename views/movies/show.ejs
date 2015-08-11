@@ -1,0 +1,21 @@
+
+<br><div class="well">
+  <h1><%= description.Title %> </h1>
+  <b>Description: </b><%= description.Plot %><br>
+  <b>Rating: </b>
+  <% for (var i = 0; i < rating; i++) { %>
+    <b>*</b>
+  <%  }; %><br>
+  <b>RT Rating: </b><%= description.tomatoRating %><br>
+  <b>RT Meter: </b><%= description.tomatoMeter %><br>
+  <b>RT Consensus: </b><%= description.tomatoConsensus %><br>
+</div>
+<form action="/favorites" method="post">
+  <div class="form-group">
+    <input name="title" type="hidden" value="<%= description.Title %>">
+    <input name="year" type="hidden" value="<%= description.Year %>">
+    <input name="imdbid" type="hidden" value="<%= description.imdbID %>">
+    <input name="poster" type="hidden" value="<%= description.Poster %>">
+  </div>
+  <button type="submit" class="btn btn-success">Add to Favorites</button>
+</form>
