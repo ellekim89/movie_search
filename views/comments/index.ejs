@@ -1,0 +1,15 @@
+<h1> <%= favorite.title %> - Comments </h1>
+
+<% favorite.comments.forEach(function(comment){ %>
+<div class="well">
+<%= comment.comment %><br>
+<em><%= comment.createdAt %></em>
+
+</div>
+<% }) %>
+<form method="post" action="/favorites/<%= favorite.id%>/comments"class ="form">
+<div class = "form-group">
+<textarea name="comment"> </textarea><br>
+<input type="submit" class ="btn btn-primary" value ="Add Comment">
+</div>
+</form>
