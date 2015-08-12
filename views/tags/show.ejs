@@ -1,0 +1,9 @@
+<h1><%= tag.name %></h1>
+
+<div class="well">
+  <ul>
+  <% tag.favorites.forEach(function(favorite) { %>
+    <li><%= favorite.title %></li>
+  <% }); %>
+  </ul>
+</div>
